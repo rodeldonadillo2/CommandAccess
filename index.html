@@ -1537,13 +1537,13 @@
         if (isPayLater) {
           if (isPaid) {
             paymentCell += `
-          <span class="paid-tile" onclick="togglePaid('${orderNum}', false)" title="Click to mark unpaid">
+          <span class="paid-tile" onclick="togglePaid('${safeOrderNum}', false)" title="Click to mark unpaid">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round" width="10" height="10"><polyline points="20 6 9 17 4 12"/></svg>
             Paid
           </span>`;
           } else {
             paymentCell += `
-          <button class="btn-mark-paid" onclick="togglePaid('${orderNum}', true)">
+          <button class="btn-mark-paid" onclick="togglePaid('${safeOrderNum}', true)">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
             Mark as Paid
           </button>`;
